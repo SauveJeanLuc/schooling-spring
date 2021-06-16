@@ -67,7 +67,11 @@ public class Student {
         this.beds = beds;
     }
 
-    public Student(StudentDto dto) {}
+    public Student(StudentDto dto) {
+        this.firstName = dto.getFirstName();
+        this.gender = dto.getGender();
+        this.lastName = dto.getLastName();
+    }
 
         public Student(String firstName, String lastName , String gender) {
             this.firstName = firstName;
