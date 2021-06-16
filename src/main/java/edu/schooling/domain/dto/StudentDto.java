@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import edu.schooling.domain.Bed;
 import edu.schooling.domain.CourseAssignment;
+import edu.schooling.domain.Student;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -18,6 +19,12 @@ public class StudentDto {
     private String gender;
     private Set<Bed> beds = new HashSet<Bed>();
     private Set<CourseAssignment> courses = new HashSet<>();
+
+    public StudentDto(Student student) {
+        this.firstName = student.getFirstName();
+        this.lastName = student.getLastName();
+        this.gender = student.getGender();
+    }
 
     public Long getId() {
         return id;
