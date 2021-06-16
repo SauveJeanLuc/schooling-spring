@@ -22,4 +22,6 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     //Query by Sql
     @Query(value = "select * from student_tbl stb where stb.first_name=:firstName and stb.last_name=:lastName",nativeQuery = true)
     List<Student> findByFirstNameOrLastNameHql(@Param("firstName") String firstName,@Param("lastName") String lastName);
+
+    List<Student> findFirstNameAndLastNameHql(String firstName, String lastName);
 }

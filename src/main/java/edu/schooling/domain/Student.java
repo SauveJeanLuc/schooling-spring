@@ -1,5 +1,7 @@
 package edu.schooling.domain;
 
+import edu.schooling.domain.dto.StudentDto;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -65,7 +67,7 @@ public class Student {
         this.beds = beds;
     }
 
-    public Student() {}
+    public Student(StudentDto dto) {}
 
         public Student(String firstName, String lastName , String gender) {
             this.firstName = firstName;
