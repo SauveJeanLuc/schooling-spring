@@ -27,7 +27,6 @@ public class CourseAssignment  implements Serializable {
     @ManyToOne
     private Student student;
 
-
     @ManyToOne
     private Course course;
 

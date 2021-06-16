@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "student")
+@Table
 public class Student {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,11 @@ public class Student {
         @OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
         private Set<CourseAssignment> courses = new HashSet<>();
 
-        public Long getId() {
+    public Student() {
+
+    }
+
+    public Long getId() {
             return id;
         }
 

@@ -14,7 +14,7 @@ public class Course {
     private String title;
     private  Long numHours;
 
-    @OneToMany(mappedBy = "C")
+    @OneToMany
     private Set<CourseAssignment> courseAssignments = new HashSet<>();
 
     public Course() {
