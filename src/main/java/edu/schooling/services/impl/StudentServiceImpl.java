@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getByFirstNameAndLastName(String firstName, String lastName) throws Exception {
         if (firstName == null || lastName==null)
             throw new InvalidAttributesException("First Name and last Name should not be empty!");
-        return studentRepository.findFirstNameAndLastNameHql(firstName, lastName);
+        return studentRepository.findByFirstNameAndLastNameHql(firstName, lastName);
     }
 }
 

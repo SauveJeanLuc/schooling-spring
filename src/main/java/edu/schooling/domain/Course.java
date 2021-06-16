@@ -7,51 +7,68 @@ import java.util.Set;
 @Entity
 @Table
 public class Course {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private  Long numHours;
+
+    private String name;
+
+    private int number;
+
+    private String description;
 
     @OneToMany
     private Set<CourseAssignment> courseAssignments = new HashSet<>();
 
-    public Course() {
+    public Course() {}
+
+    public Course(String name, int number, String description) {
+        this.name = name;
+        this.number = number;
+        this.description = description;
     }
 
-    public Course(String title, Long numHours) {
-        this.title = title;
-        this.numHours = numHours;
-    }
-
-    public Course(Long id, String title, Long numHours) {
+    public Course(Long id, String name, int number, String description) {
         this.id = id;
-        this.title = title;
-        this.numHours = numHours;
-    }
-
-    public Long getId() {
-        return id;
+        this.name = name;
+        this.number = number;
+        this.description = description;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public Long getId() {
+        return id;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Long getNumHours() {
-        return numHours;
+    public String getName() {
+        return name;
     }
 
-    public void setNumHours(Long numHours) {
-        this.numHours = numHours;
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
