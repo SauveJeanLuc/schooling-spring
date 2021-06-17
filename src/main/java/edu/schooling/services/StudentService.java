@@ -9,6 +9,7 @@ public interface StudentService {
 
     public Student save(StudentDto dto) throws Exception;
     public List<Student> getAll() throws Exception;
+    List<Student> getByFirstNameAndLastName(String firstName, String lastName) throws Exception;
 
     List<Student> getByFirstNameAndLastName(String firstName, String lastName) throws Exception;
 }

@@ -6,9 +6,9 @@ import edu.schooling.repositories.StudentRepository;
 import edu.schooling.services.StudentService;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.directory.InvalidAttributesException;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -28,10 +28,25 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAll() throws Exception  {
         return studentRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cc6be6eb30967282d5a0057b2942f28df2081315
     @Override
     public List<Student> getByFirstNameAndLastName(String firstName, String lastName) throws Exception {
         if (firstName == null || lastName==null)
             throw new InvalidAttributesException("First Name and last Name should not be empty!");
         return studentRepository.findByFirstNameAndLastNameHql(firstName, lastName);
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+
+
+
+
+>>>>>>> cc6be6eb30967282d5a0057b2942f28df2081315

@@ -64,26 +64,21 @@ public class Student {
     public Set<Bed> getBeds() {
         return beds;
     }
-
     public void setBeds(Set<Bed> beds) {
         this.beds = beds;
     }
 
-    public Student() {}
+    public void setCourses(Set<CourseAssignment> courses) {
+        this.courses = courses;
+    }
 
-        public Student(String firstName, String lastName , String gender) {
-            this.firstName = firstName;
-            this.gender = gender;
-            this.lastName = lastName;
-        }
-        public Student(Long id){
-            this.id = id;
-        }
-        public Student(Long id, String firstName, String lastName , String gender) {
-            this.id = id;
-            this.firstName = firstName;
-            this.gender = gender;
-            this.lastName = lastName;
-        }
+    public Set<CourseAssignment> getCourses() {
+        return courses;
+    }
 
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
 }
