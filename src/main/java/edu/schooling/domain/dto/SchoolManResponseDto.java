@@ -22,7 +22,6 @@ public class SchoolManResponseDto {
         this.data = data;
         this.message = message;
         this.status = status;
-
     }
 
     public HttpStatus getStatus() {

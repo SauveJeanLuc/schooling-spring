@@ -7,7 +7,6 @@ import edu.schooling.repositories.StudentRepository;
 import edu.schooling.services.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -16,14 +15,13 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-@Primary
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceImplCopy implements StudentService {
 
     private final Logger log = LoggerFactory.getLogger(Students.class);
 
     //@Autowired
     private final StudentRepository studentRepository;
-    public StudentServiceImpl(StudentRepository studentRepository) {
+    public StudentServiceImplCopy(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
     @Transactional
